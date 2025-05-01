@@ -198,7 +198,12 @@ const ProjectCard: React.FC<{ project: ProjectData; index: number }> = ({ projec
 
       {/* Try to load image if available */}
       {project.image && (
-        <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${project.image})` }}></div>
+        <div
+          className="absolute inset-0 opacity-20 bg-cover bg-center"
+          style={{ backgroundImage: `url(${project.image})` }}
+          aria-label={`Background image for ${project.title} project`}
+          role="img"
+        ></div>
       )}
 
       {/* Glassmorphic content */}
@@ -223,15 +228,23 @@ const ProjectCard: React.FC<{ project: ProjectData; index: number }> = ({ projec
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-primary-700/50 backdrop-blur-md !text-white rounded-full hover:bg-primary-500/50 transition-colors"
+              aria-label={`Visit live demo of ${project.title}`}
             >
               <FaExternalLinkAlt />
+              <span className="sr-only">Visit live site</span>
             </a>
-            <a
-              href={project.githubLink}
-              className="p-3 bg-primary-700/50 backdrop-blur-md !text-white rounded-full hover:bg-primary-500/50 transition-colors"
-            >
-              <FaGithub color='white' />
-            </a>
+            {project.githubLink && (
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-primary-700/50 backdrop-blur-md !text-white rounded-full hover:bg-primary-500/50 transition-colors"
+                aria-label={`View source code for ${project.title} on GitHub`}
+              >
+                <FaGithub color='white' />
+                <span className="sr-only">View source code on GitHub</span>
+              </a>
+            )}
           </div>
         </div>
 

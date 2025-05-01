@@ -56,17 +56,23 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen w-screen flex items-center justify-center overflow-hidden px-4 py-12 pointer-events-none">
+    <section
+      id="hero"
+      className="relative min-h-screen w-screen flex items-center justify-center overflow-hidden px-4 py-12 pointer-events-none"
+      aria-label="Hero Section"
+      itemScope
+      itemType="https://schema.org/AboutPage"
+    >
       {/* Background with subtle pattern or noise */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20" aria-hidden="true">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-700/10 to-primary-500/10" />
         <div className="absolute h-full w-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')]" />
       </div>
 
       {/* Animated background circles */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-700/20 rounded-full filter blur-3xl animate-blob animation-delay-2000" />
-      <div className="absolute top-1/3 right-1/3 w-96 h-96 bg-primary-500/20 rounded-full filter blur-3xl animate-blob animation-delay-4000" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-200/30 rounded-full filter blur-3xl animate-blob" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-700/20 rounded-full filter blur-3xl animate-blob animation-delay-2000" aria-hidden="true" />
+      <div className="absolute top-1/3 right-1/3 w-96 h-96 bg-primary-500/20 rounded-full filter blur-3xl animate-blob animation-delay-4000" aria-hidden="true" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-200/30 rounded-full filter blur-3xl animate-blob" aria-hidden="true" />
 
       {/* Glassmorphic Card - centered with flex */}
       <div
@@ -75,37 +81,72 @@ const Hero = () => {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 sm:p-12">
           {/* Left Column - Content */}
-          <div ref={contentRef} className="flex flex-col justify-center">
+          <div ref={contentRef} className="flex flex-col justify-center" itemProp="mainContentOfPage">
             <h2 className="text-xl sm:text-2xl text-white/80 font-light mb-2">
               Hello I'M A
             </h2>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" itemProp="headline">
               <span className="text-white">Web </span>
-              <span className="bg-gradient-to-r from-primary-200 to-primary-500 bg-clip-text text-primary-900">
+              <span className="bg-gradient-to-r from-primary-200 to-primary-500 bg-clip-text text-primary-900" itemProp="specialty">
                 Developer.
               </span>
             </h1>
 
-            <p className="text-lg text-gray-300 font-light mb-8 max-w-xl">
+            <p className="text-lg text-gray-300 font-light mb-8 max-w-xl" itemProp="description">
               Hi I'm Albaz Aqther, a passionate Developer based in Dubai, Welcome to my world.
             </p>
 
             {/* Social Media Icons */}
-            <div ref={socialIconsRef} className="flex space-x-4 mb-8">
-              <a href="https://www.facebook.com/albaz.alba.12/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto">
+            <div ref={socialIconsRef} className="flex space-x-4 mb-8" itemProp="sameAs">
+              <a
+                href="https://www.facebook.com/albaz.alba.12/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto"
+                aria-label="Facebook Profile"
+              >
                 <FaFacebookF size={20} />
+                <span className="sr-only">Facebook</span>
               </a>
-              <a href="https://twitter.com/albazalba10" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto">
+              <a
+                href="https://twitter.com/albazalba10"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto"
+                aria-label="Twitter Profile"
+              >
                 <FaTwitter size={20} />
+                <span className="sr-only">Twitter</span>
               </a>
-              <a href="https://www.instagram.com/albazakthar/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto">
+              <a
+                href="https://www.instagram.com/albazakthar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto"
+                aria-label="Instagram Profile"
+              >
                 <FaInstagram size={20} />
+                <span className="sr-only">Instagram</span>
               </a>
-              <a href="https://www.linkedin.com/in/albazaqther/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto">
+              <a
+                href="https://www.linkedin.com/in/albazaqther/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto"
+                aria-label="LinkedIn Profile"
+              >
                 <FaLinkedinIn size={20} />
+                <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="https://github.com/albazalba" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto">
+              <a
+                href="https://github.com/albazalba"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary-700/35 flex items-center justify-center text-white hover:bg-primary-800 transition-colors pointer-events-auto"
+                aria-label="GitHub Profile"
+              >
                 <FaGithub size={20} />
+                <span className="sr-only">GitHub</span>
               </a>
             </div>
 
@@ -113,12 +154,14 @@ const Hero = () => {
               <button
                 onClick={scrollToSection('projects')}
                 className="px-6 border-0 py-3 bg-gradient-to-r from-primary-700 to-primary-500 text-white font-medium rounded-lg hover:opacity-90 transition-opacity pointer-events-auto"
+                aria-label="View my projects"
               >
                 View Projects
               </button>
               <button
                 onClick={scrollToSection('contact')}
                 className="px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors pointer-events-auto"
+                aria-label="Contact me"
               >
                 Contact Me
               </button>
@@ -131,18 +174,26 @@ const Hero = () => {
               <div className="">
                 {/* Profile photo */}
                 <div className="h-96">
-                  <img src="/toy.png" alt="Albaz Aqther" className="w-full h-full object-cover" />
+                  <img
+                    src="/toy.png"
+                    alt="Albaz Aqther - Web Developer"
+                    className="w-full h-full object-cover"
+                    itemProp="image"
+                    loading="eager"
+                    width="384"
+                    height="384"
+                  />
                 </div>
               </div>
-              <div className="absolute -top-5 -right-5 w-24 h-24 bg-primary-500/30 rounded-full filter blur-xl" />
-              <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-primary-700/30 rounded-full filter blur-xl" />
+              <div className="absolute -top-5 -right-5 w-24 h-24 bg-primary-500/30 rounded-full filter blur-xl" aria-hidden="true" />
+              <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-primary-700/30 rounded-full filter blur-xl" aria-hidden="true" />
             </div>
           </div>
         </div>
 
         {/* Card decoration */}
-        <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-primary-700/30 rounded-full filter blur-xl" />
-        <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-primary-500/30 rounded-full filter blur-xl" />
+        <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-primary-700/30 rounded-full filter blur-xl" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-primary-500/30 rounded-full filter blur-xl" aria-hidden="true" />
       </div>
     </section>
   )
