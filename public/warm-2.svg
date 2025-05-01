@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="975px" viewBox="0 0 1440 975" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Global / Haze / Cold Copy 9</title>
+    <defs>
+        <radialGradient cx="35.7813869%" cy="53.9356542%" fx="35.7813869%" fy="53.9356542%" r="77.1884504%" gradientTransform="translate(0.357814,0.539357),scale(0.561111,1.000000),rotate(-1.319889),scale(1.000000,1.335804),translate(-0.357814,-0.539357)" id="radialGradient-1">
+            <stop stop-color="#DA7644" offset="0%"></stop>
+            <stop stop-color="#3A0C83" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0.731102196%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#0C0A1D" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#0C0A1D" offset="100%"></stop>
+        </linearGradient>
+        <path d="M730.56541,85.855098 C638.95026,166.130101 584.433878,130.392796 378.277321,158.662659 C246.675449,176.708977 182.062752,-17.0752395 119.122866,151.195217 C55.3465737,321.701812 60.0794854,496.757409 119.300328,526.627178 C178.52117,556.496946 311.0554,569.762881 346.992834,646.304163 C382.930268,722.845445 317.737872,745.887741 535.893283,763.311773 C754.048694,780.735804 875.362053,736.33075 946.301998,632.067495 C1017.24194,527.80424 1289.28632,790.555566 1335.34697,515.504781 C1381.40763,240.453997 1383.76965,249.869501 1297.21611,158.393335 C1210.66258,66.9171687 1149.66676,3.0909479 1014.52176,66.5642059 C879.376757,130.037464 822.180559,5.58009528 730.56541,85.855098 Z" id="path-3"></path>
+        <filter x="-11.6%" y="-20.7%" width="123.2%" height="141.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Marketing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.24">
+        <g id="Landingpage" transform="translate(0.000000, -2068.000000)">
+            <g id="Global-/-Haze-/-Warm---1" transform="translate(28.000000, 2149.000000)">
+                <g id="Path-2" filter="url(#filter-4)">
+                    <use fill="url(#radialGradient-1)" xlink:href="#path-3"></use>
+                    <use fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
