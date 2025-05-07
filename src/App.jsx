@@ -7,6 +7,7 @@ import Hero from "./components/organisms/Hero";
 import WhatIDo from "./components/organisms/WhatIDo";
 import Experience from "./components/organisms/Experience";
 import Projects from "./components/organisms/Projects";
+import Games from "./components/organisms/Games";
 import Contact from "./components/organisms/Contact";
 
 // Simple loading fallback that won't strain performance
@@ -59,6 +60,7 @@ function App() {
           <WhatIDo />
           <Experience />
           <Projects />
+          {/* <Games /> */}
           <Contact />
         </main>
         <footer className="text-center py-4 text-sm text-gray-400">

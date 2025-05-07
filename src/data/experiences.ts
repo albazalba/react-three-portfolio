@@ -4,7 +4,7 @@ import { ExperienceType } from '../types/experience';
 const experiences: ExperienceType[] = [
   {
     id: 1,
-    company: "Evoluce Technologies",
+    company: "Evolvex Technologies",
     position: "Frontend Developer Lead",
     period: "Dec 2024 - Present",
     location: "Dubai, United Arab Emirates",
@@ -24,7 +24,7 @@ const experiences: ExperienceType[] = [
     company: "AntStack Technologies (MTS-2)",
     position: "Fullstack Developer",
     period: "May 2021 - Dec 2024",
-    location: "Dubai, United Arab Emirates",
+    location: "Bangalore, India",
     responsibilities: [
       "Developed software using Strapi CMS, Next, React, MongoDB, AWS, and services to build scalable and real-time web applications.",
       "Implemented Redux and Redux Toolkit to manage global state across large-scale applications, optimizing data flow.",
