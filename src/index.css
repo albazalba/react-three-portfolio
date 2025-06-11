@@ -92,3 +92,113 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@keyframes animate-scaleX {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.05);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.wave-button {
+  animation: animate-scaleX 0.6s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.wave-button:before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg, var(--button-color-start, #c0f35149), var(--button-color-end, #647e2c));
+
+  transform: translateY(100%);
+  z-index: -1;
+  transition: transform .3s cubic-bezier(.4,0,0,1);
+  pointer-events: none;
+}
+
+.wave-button:hover:before {
+  transform: translateY(0);
+
+}
+
+
+
+/* Magic card effects */
+.magic-card-container {
+  position: relative;
+  isolation: isolate;
+}
+
+.magic-card {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.magic-shine {
+  --size: 600px;
+  --pos-x: 0px;
+  --pos-y: 0px;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 80%);
+  transform: translate(calc(var(--x) - var(--size) / 2), calc(var(--y) - var(--size) / 2));
+  animation: shine-move 1s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes shine-move {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* Light particles floating effect */
+.magic-card-container::before,
+.magic-card-container::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.896);
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.808);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.magic-card-container::before {
+  top: 20%;
+  left: 30%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.magic-card-container::after {
+  bottom: 30%;
+  right: 25%;
+  animation: float 8s infinite ease-in-out;
+}
+
+.magic-card-container:hover::before,
+.magic-card-container:hover::after {
+  opacity: 1;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+  }
+}
