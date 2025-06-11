@@ -149,7 +149,7 @@ const Header = () => {
             className="font-bold text-white text-lg sm:text-xl md:text-xl relative cursor-pointer group"
             onClick={scrollToSection('hero')}
           >
-            <div className="w-10 sm:w-12 md:w-16 bg-cover overflow-hidden transition-transform duration-300 group-hover:scale-110">
+            <div className="max-w-10 max-h-10 sm:w-12 md:w-16 bg-cover overflow-hidden transition-transform duration-300 group-hover:scale-110">
               <img src="/AQ.png" alt="Albaz Aqther" className="invert h-full bg-cover" />
             </div>
             <div className="absolute inset-0 bg-primary-500/20 rounded-full filter blur-md -z-10 scale-[1.8] opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
