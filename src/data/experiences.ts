@@ -2,23 +2,23 @@ import { ExperienceType } from "../types/experience";
 
 // Experience data from the resume
 const experiences: ExperienceType[] = [
-  // {
-  //   id: 1,
-  //   company: "Evolvex Technologies",
-  //   position: "Frontend Developer Lead",
-  //   period: "Dec 2024 - Present",
-  //   location: "Dubai, United Arab Emirates",
-  //   responsibilities: [
-  //     "Spearheaded the development of an advanced dashboard using React, Redux Toolkit, and Ant Design.",
-  //     "Implemented drag-and-drop plugins and optimized user interactions while maintaining state consistency and performance.",
-  //     "Integrated React DnD Kit for drag-and-drop functionality, enhancing user interactivity within the dashboard.",
-  //     "Implemented code reviews, optimizing code reuses, sprint planning, and feature delivery while ensuring performance and maintainability.",
-  //     "Implemented testing standards to handle real-time data updates, ensuring a seamless user experience.",
-  //     "Demonstrated leadership by mentoring 6 developers jointly, fostering knowledge sharing, and emphasizing speed and responsiveness across all supported platforms."
-  //   ],
-  //   technologies: ["React", "Redux Toolkit", "Ant Design", "React DnD Kit"],
-  //   color: "blue"
-  // },
+  {
+    id: 1,
+    company: "Evolvex Technologies",
+    position: "Frontend Developer Lead",
+    period: "Dec 2024 - Present",
+    location: "Dubai, United Arab Emirates",
+    responsibilities: [
+      "Spearheaded the development of an advanced dashboard using React, Redux Toolkit, and Ant Design.",
+      "Implemented drag-and-drop plugins and optimized user interactions while maintaining state consistency and performance.",
+      "Integrated React DnD Kit for drag-and-drop functionality, enhancing user interactivity within the dashboard.",
+      "Implemented code reviews, optimizing code reuses, sprint planning, and feature delivery while ensuring performance and maintainability.",
+      "Implemented testing standards to handle real-time data updates, ensuring a seamless user experience.",
+      "Demonstrated leadership by mentoring 6 developers jointly, fostering knowledge sharing, and emphasizing speed and responsiveness across all supported platforms."
+    ],
+    technologies: ["React", "Redux Toolkit", "Ant Design", "React DnD Kit"],
+    color: "blue"
+  },
   {
     id: 2,
     company: "AntStack Technologies (MTS-2)",
