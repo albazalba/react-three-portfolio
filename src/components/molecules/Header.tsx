@@ -158,11 +158,11 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul ref={navItemsRef} className="flex space-x-6 text-base">
-              <li className="nav-item hover:text-primary-500"><a href="#hero" onClick={scrollToSection('hero')} className="text-white hover:text-primary-500 transition block py-1">Home</a></li>
-              <li className="nav-item hover:text-primary-500"><a href="#whatido" onClick={scrollToSection('whatido')} className="text-white hover:text-primary-500 transition block py-1">Services</a></li>
-              <li className="nav-item hover:text-primary-500"><a href="#experience" onClick={scrollToSection('experience')} className="text-white hover:text-primary-500 transition block py-1">Experience</a></li>
-              <li className="nav-item hover:text-primary-500"><a href="#projects" onClick={scrollToSection('projects')} className="text-white hover:text-primary-500 transition block py-1">Projects</a></li>
-              <li className="nav-item hover:text-primary-500"><a href="#contact" onClick={scrollToSection('contact')} className="text-white hover:text-primary-500 transition block py-1">Contact</a></li>
+              <li className="nav-item hover:text-primary-500"><a href="#hero" onClick={scrollToSection('hero')} className="!text-white hover:text-primary-500 transition block py-1">Home</a></li>
+              <li className="nav-item hover:text-primary-500"><a href="#whatido" onClick={scrollToSection('whatido')} className="!text-white hover:text-primary-500 transition block py-1">Services</a></li>
+              <li className="nav-item hover:text-primary-500"><a href="#experience" onClick={scrollToSection('experience')} className="!text-white hover:text-primary-500 transition block py-1">Experience</a></li>
+              <li className="nav-item hover:text-primary-500"><a href="#projects" onClick={scrollToSection('projects')} className="!text-white hover:text-primary-500 transition block py-1">Projects</a></li>
+              <li className="nav-item hover:text-primary-500"><a href="#contact" onClick={scrollToSection('contact')} className="!text-white hover:text-primary-500 transition block py-1">Contact</a></li>
             </ul>
           </nav>
 
