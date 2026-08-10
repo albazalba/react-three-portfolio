@@ -103,17 +103,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-6 border-t border-border pt-8">
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-accent"
-              >
-                View live
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
-            )}
             <Link
               href="/insights"
               className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"

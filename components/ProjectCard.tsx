@@ -17,9 +17,6 @@ export default function ProjectCard({
   variant = "featured",
 }: ProjectCardProps) {
   const isEven = index % 2 === 0;
-  const projectHref = project.featured
-    ? `/work/${project.slug}`
-    : project.link;
 
   if (variant === "compact") {
     return (
@@ -32,21 +29,7 @@ export default function ProjectCard({
             </div>
             <p className="max-w-xl text-sm text-muted">{project.description}</p>
           </div>
-          <div className="flex items-center gap-6 text-sm text-muted">
-            <span>{project.year}</span>
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 transition-colors hover:text-accent"
-                data-cursor="interactive"
-              >
-                Visit
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
-            )}
-          </div>
+          <span className="text-sm text-muted">{project.year}</span>
         </div>
       </article>
     );
@@ -108,7 +91,7 @@ export default function ProjectCard({
   if (project.featured) {
     return (
       <Link
-        href={projectHref!}
+        href={`/work/${project.slug}`}
         className={cn(
           "group grid cursor-pointer items-center gap-8 border-t border-border py-12 md:grid-cols-12 md:gap-12 md:py-16",
           !isEven && "md:[direction:rtl]"
