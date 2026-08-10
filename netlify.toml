@@ -5,15 +5,17 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Temporary: www is Netlify primary while albazaqther.com SSL propagates.
+# Re-enable apex canonical redirects once albazaqther.com shows a green checkmark.
+
 [[redirects]]
   from = "http://albazaqther.com/*"
-  to = "https://albazaqther.com/:splat"
+  to = "https://www.albazaqther.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://www.albazaqther.com/*"
-  to = "https://albazaqther.com/:splat"
+  from = "http://www.albazaqther.com/*"
+  to = "https://www.albazaqther.com/:splat"
   status = 301
   force = true
-
