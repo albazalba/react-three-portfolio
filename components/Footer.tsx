@@ -37,7 +37,7 @@ export default function Footer() {
               ))}
             </nav>
             <p className="mt-6 text-xs text-muted">
-              © 2026 {siteConfig.legalName}
+              © 2026 {siteConfig.displayName}
             </p>
           </div>
 

@@ -1,14 +1,17 @@
 export const siteConfig = {
+  /** Full legal name — used only as schema alternateName for discoverability */
   legalName: "Abdul Kader Albaz Aqther",
-  alternateNames: ["Abdul Kader Albaz", "Albaz Aqther"],
+  /** Long form used across the site */
   displayName: "Albaz Aqther",
-  shortName: "Albaz / Aqther",
+  /** Short form used in conversational copy */
+  shortName: "Albaz",
+  alternateNames: ["Albaz", "Abdul Kader Albaz Aqther", "Abdul Kader Albaz"],
   jobTitle: "Software Engineer",
-  title: "Abdul Kader Albaz Aqther — Software Engineer in Dubai",
+  title: "Albaz Aqther — Software Engineer in Dubai",
   description:
-    "Abdul Kader Albaz Aqther is a software engineer based in Dubai specializing in React, Next.js, TypeScript and AI-powered applications.",
+    "Albaz Aqther is a software engineer based in Dubai specializing in modern web applications, product engineering and AI-powered systems.",
   personDescription:
-    "Software engineer specializing in frontend engineering, React, Next.js, TypeScript and AI-powered applications.",
+    "Software engineer specializing in modern web applications, product engineering and AI-powered systems.",
   url: "https://albazaqther.com",
   location: "Dubai, UAE",
   email: "albazalba10@gmail.com",
@@ -24,7 +27,8 @@ export const siteConfig = {
   },
   knowsAbout: [
     "Software Engineering",
-    "Frontend Engineering",
+    "Web Applications",
+    "Product Engineering",
     "React",
     "Next.js",
     "TypeScript",
@@ -32,7 +36,6 @@ export const siteConfig = {
     "LLMs",
     "AI Agents",
     "Python",
-    "Frontend Architecture",
   ],
   og: {
     default: "/me.png",
@@ -91,9 +94,9 @@ export const featuredProjects: Project[] = [
     year: "2025 — Present",
     featured: true,
     mockup: "ai-ops",
-    seoTitle: "AI Operations Platform — Abdul Kader Albaz Aqther",
+    seoTitle: "AI Operations Platform — Albaz Aqther",
     seoDescription:
-      "Case study on an AI-powered operations platform built with React, Next.js, Python, FastAPI and LLMs by Abdul Kader Albaz Aqther.",
+      "Case study on an AI-powered operations platform built with React, Next.js, Python, FastAPI and LLMs by Albaz Aqther.",
     dateCreated: "2025-01-01",
     dateModified: "2026-08-01",
     caseStudy: [
@@ -141,7 +144,7 @@ export const featuredProjects: Project[] = [
     year: "2024 — Present",
     featured: true,
     mockup: "risk",
-    seoTitle: "Kinetic Risk Console — Abdul Kader Albaz Aqther",
+    seoTitle: "Kinetic Risk Console — Albaz Aqther",
     seoDescription:
       "A modern risk-management and analytics dashboard focused on information architecture, React and TypeScript.",
     dateCreated: "2024-06-01",
@@ -198,7 +201,7 @@ export const featuredProjects: Project[] = [
     year: "2022 — 2024",
     featured: true,
     mockup: "pulse",
-    seoTitle: "Pulse Feedback Platform — Abdul Kader Albaz Aqther",
+    seoTitle: "Pulse Feedback Platform — Albaz Aqther",
     seoDescription:
       "Enterprise feedback platform built with React, TypeScript, TanStack Query and AWS.",
     dateCreated: "2022-03-01",
@@ -254,7 +257,7 @@ export const featuredProjects: Project[] = [
     year: "2025",
     featured: true,
     mockup: "trading",
-    seoTitle: "AI Trading System — Abdul Kader Albaz Aqther",
+    seoTitle: "AI Trading System — Albaz Aqther",
     seoDescription:
       "An experimental algorithmic trading and backtesting system combining Python, machine learning and market data.",
     dateCreated: "2025-02-01",
@@ -308,7 +311,7 @@ export const additionalProjects: Project[] = [
     featured: false,
     mockup: "default",
     image: "/onleave.png",
-    seoTitle: "Leave Tracker — Abdul Kader Albaz Aqther",
+    seoTitle: "Leave Tracker — Albaz Aqther",
     seoDescription: "Employee leave management system built with React and AWS.",
     caseStudy: [],
   },
@@ -325,7 +328,7 @@ export const additionalProjects: Project[] = [
     featured: false,
     mockup: "default",
     image: "/antstack.png",
-    seoTitle: "Antstack.com — Abdul Kader Albaz Aqther",
+    seoTitle: "Antstack.com — Albaz Aqther",
     seoDescription: "Company website built with Astro and Strapi CMS.",
     caseStudy: [],
   },
@@ -342,7 +345,7 @@ export const additionalProjects: Project[] = [
     featured: false,
     mockup: "default",
     image: "/cyberpwn.png",
-    seoTitle: "Cyberpwn — Abdul Kader Albaz Aqther",
+    seoTitle: "Cyberpwn — Albaz Aqther",
     seoDescription: "Modern web application with Next.js and Strapi CMS.",
     caseStudy: [],
   },
@@ -358,7 +361,7 @@ export const additionalProjects: Project[] = [
     featured: false,
     mockup: "default",
     image: "/Corplac.png",
-    seoTitle: "Real Estate App — Abdul Kader Albaz Aqther",
+    seoTitle: "Real Estate App — Albaz Aqther",
     seoDescription: "Full-stack real estate application built with the MERN stack.",
     caseStudy: [],
   },
@@ -375,7 +378,7 @@ export const additionalProjects: Project[] = [
     featured: false,
     mockup: "default",
     image: "/restaurant.png",
-    seoTitle: "Restaurant Finder — Abdul Kader Albaz Aqther",
+    seoTitle: "Restaurant Finder — Albaz Aqther",
     seoDescription: "Next.js application for finding and exploring restaurants.",
     caseStudy: [],
   },

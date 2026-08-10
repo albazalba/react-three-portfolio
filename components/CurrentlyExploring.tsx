@@ -13,7 +13,7 @@ export default function CurrentlyExploring() {
           Currently exploring
         </h3>
         <blockquote className="mt-4 max-w-lg text-muted">
-          Expanding from frontend engineering into AI systems and intelligent
+          Expanding from product and web engineering into AI systems and intelligent
           products.
         </blockquote>
       </RevealOnScroll>

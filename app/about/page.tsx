@@ -26,7 +26,7 @@ export default function AboutPage() {
           <JsonLd
             data={[
               generateWebPageSchema({
-                name: "About Abdul Kader Albaz Aqther",
+                name: "About Albaz Aqther",
                 description: pageDescriptions.about,
                 path: "/about",
               }),

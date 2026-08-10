@@ -1,20 +1,19 @@
 import Link from "next/link";
+import { siteConfig } from "@/data/site";
 
 export const profileFaqs = [
   {
-    question: "Who is Abdul Kader Albaz Aqther?",
-    answer:
-      "Abdul Kader Albaz Aqther is a software engineer based in Dubai, UAE, specializing in frontend engineering with React, Next.js and TypeScript, with a growing focus on AI-powered applications and intelligent systems.",
+    question: `Who is ${siteConfig.displayName}?`,
+    answer: `${siteConfig.displayName} is a software engineer based in Dubai, UAE, specializing in modern web applications and AI-powered systems — from product interfaces to intelligent agents and LLM-driven platforms.`,
   },
   {
-    question: "What does Abdul specialize in?",
+    question: `What does ${siteConfig.shortName} specialize in?`,
     answer:
-      "Frontend architecture, React and Next.js development, TypeScript, complex dashboards, and AI application engineering including LLMs, AI agents and Python backends.",
+      "Modern web applications, product engineering, complex dashboards, and AI application development including LLMs, AI agents and Python backends.",
   },
   {
-    question: "Where is Abdul based?",
-    answer:
-      "Abdul is based in Dubai, United Arab Emirates, and works with teams globally.",
+    question: `Where is ${siteConfig.shortName} based?`,
+    answer: `${siteConfig.shortName} is based in Dubai, United Arab Emirates, and works with teams globally.`,
   },
 ];
 

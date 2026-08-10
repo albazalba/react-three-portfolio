@@ -41,7 +41,7 @@ export default function InsightsPage() {
           <PageHeader
             label="Writing"
             title="Insights"
-            description="Engineering notes on React, Next.js, TypeScript, frontend architecture and AI application development."
+            description="Engineering notes on React, Next.js, TypeScript, web architecture and AI application development."
           />
 
           <div className="mt-12 space-y-0 border-t border-border">

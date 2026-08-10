@@ -25,7 +25,7 @@ export default function Home() {
               {
                 href: "/experience",
                 label: "Experience",
-                text: "Professional history in frontend and product engineering.",
+                text: "Professional history in product and web engineering.",
               },
               {
                 href: "/insights",

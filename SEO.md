@@ -1,6 +1,6 @@
 # SEO & Discoverability Guide
 
-This document explains how SEO, GEO (Generative Engine Optimization), and AEO (Answer Engine Optimization) are implemented for **Abdul Kader Albaz Aqther**'s portfolio, and how to maintain it.
+This document explains how SEO, GEO (Generative Engine Optimization), and AEO (Answer Engine Optimization) are implemented for **Albaz Aqther**'s portfolio, and how to maintain it.
 
 ## Environment
 
@@ -156,7 +156,8 @@ Do not add fake testimonials, awards, or metrics. All structured data reflects r
 
 The site establishes entity clarity through:
 
-- Consistent legal name: **Abdul Kader Albaz Aqther**
+- Consistent display name: **Albaz Aqther** (short form: **Albaz**)
+- Legal name kept as schema `alternateName` for discoverability: Abdul Kader Albaz Aqther
 - Location signals: Dubai, UAE
 - `sameAs` links: LinkedIn, GitHub
 - Natural FAQ content on homepage

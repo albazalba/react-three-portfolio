@@ -42,7 +42,7 @@ export default function ExperiencePage() {
           <PageHeader
             label="Career"
             title="Work history"
-            description="Professional experience in frontend engineering, product development and AI-focused software work since 2021."
+            description="Professional experience in product engineering, web applications and AI-focused software work since 2021."
           />
         </div>
       </div>

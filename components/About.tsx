@@ -4,6 +4,7 @@ import SectionLabel from "./ui/SectionLabel";
 import Principles from "./Principles";
 import TechStack from "./TechStack";
 import CurrentlyExploring from "./CurrentlyExploring";
+import { siteConfig } from "@/data/site";
 
 type AboutProps = {
   standalone?: boolean;
@@ -31,7 +32,7 @@ export default function About({ standalone = false }: AboutProps) {
           <RevealOnScroll className="lg:col-span-7" delay={0.1}>
             <div className="space-y-6 text-base leading-relaxed text-muted md:text-lg">
               <p>
-                Abdul Kader Albaz Aqther is a software engineer based in Dubai,
+                {siteConfig.displayName} is a software engineer based in Dubai,
                 UAE, focused on building products — from complex dashboards and
                 data-heavy platforms to AI agents and intelligent operational
                 systems.
@@ -42,7 +43,7 @@ export default function About({ standalone = false }: AboutProps) {
                 Python backends, and LLM-powered applications.
               </p>
               <p>
-                Professional frontend engineering experience since 2021. Available
+                Professional experience building for the web since 2021. Available
                 for opportunities in Dubai, the UAE and remote/global teams.
               </p>
             </div>

@@ -48,7 +48,7 @@ export function generatePageMetadata({
       title,
       description,
       url,
-      siteName: siteConfig.legalName,
+      siteName: siteConfig.displayName,
       locale: "en_US",
       type,
       images: [
@@ -78,7 +78,7 @@ export function generatePersonSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: siteConfig.legalName,
+    name: siteConfig.displayName,
     alternateName: siteConfig.alternateNames,
     jobTitle: siteConfig.jobTitle,
     description: siteConfig.personDescription,
@@ -107,12 +107,12 @@ export function generateWebSiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: siteConfig.legalName,
+    name: siteConfig.displayName,
     url: getSiteUrl(),
     description: siteConfig.description,
     publisher: {
       "@type": "Person",
-      name: siteConfig.legalName,
+      name: siteConfig.displayName,
       url: getSiteUrl(),
     },
   };
@@ -135,7 +135,7 @@ export function generateWebPageSchema({
     url: absoluteUrl(path),
     isPartOf: {
       "@type": "WebSite",
-      name: siteConfig.legalName,
+      name: siteConfig.displayName,
       url: getSiteUrl(),
     },
   };
@@ -170,7 +170,7 @@ export function generateProjectSchema(project: Project) {
     operatingSystem: "Web",
     author: {
       "@type": "Person",
-      name: siteConfig.legalName,
+      name: siteConfig.displayName,
       url: getSiteUrl(),
     },
     keywords: project.technologies.join(", "),
@@ -193,7 +193,7 @@ export function generateArticleSchema(article: Article) {
     dateModified: article.updatedAt,
     author: {
       "@type": "Person",
-      name: siteConfig.legalName,
+      name: siteConfig.displayName,
       url: getSiteUrl(),
     },
     mainEntityOfPage: {
@@ -208,7 +208,7 @@ export function generateProfessionalServiceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: `${siteConfig.legalName} — Software Engineering`,
+    name: `${siteConfig.displayName} — Software Engineering`,
     description: siteConfig.description,
     url: getSiteUrl(),
     areaServed: {
@@ -224,16 +224,16 @@ export function generateProfessionalServiceSchema() {
 }
 
 export const pageDescriptions = {
-  home: "Abdul Kader Albaz Aqther is a software engineer based in Dubai specializing in React, Next.js, TypeScript and AI-powered applications.",
+  home: "Albaz Aqther is a software engineer based in Dubai specializing in modern web applications, product engineering and AI-powered systems.",
   about:
-    "Learn about Abdul Kader Albaz Aqther, a Dubai-based software engineer focused on frontend architecture, product engineering and AI systems.",
-  work: "Selected projects by Abdul Kader Albaz Aqther including AI platforms, analytics consoles, and production web applications.",
+    "Learn about Albaz Aqther, a Dubai-based software engineer focused on building modern web products and AI-powered systems.",
+  work: "Selected projects by Albaz Aqther including AI platforms, analytics consoles, and production web applications.",
   experience:
-    "Professional experience of Abdul Kader Albaz Aqther in frontend engineering, product development and AI-focused software work.",
+    "Professional experience of Albaz Aqther in product engineering, web applications and AI-focused software work.",
   contact:
-    "Contact Abdul Kader Albaz Aqther, a software engineer based in Dubai, UAE. Available for opportunities locally and globally.",
+    "Contact Albaz Aqther, a software engineer based in Dubai, UAE. Available for opportunities locally and globally.",
   insights:
-    "Engineering notes on React, Next.js, TypeScript, frontend architecture and AI application development by Abdul Kader Albaz Aqther.",
+    "Engineering notes on React, Next.js, TypeScript, web architecture and AI application development by Albaz Aqther.",
 } as const;
 
 export function generateFaqSchema(
@@ -256,21 +256,21 @@ export function generateFaqSchema(
 export const pageMetadata = {
   home: () =>
     generatePageMetadata({
-      title: "Abdul Kader Albaz Aqther — Software Engineer in Dubai",
+      title: "Albaz Aqther — Software Engineer in Dubai",
       description: pageDescriptions.home,
       path: "/",
       ogImage: siteConfig.og.home,
     }),
   about: () =>
     generatePageMetadata({
-      title: "About Abdul Kader Albaz Aqther — Software Engineer",
+      title: "About Albaz Aqther — Software Engineer",
       description: pageDescriptions.about,
       path: "/about",
       ogImage: siteConfig.og.about,
     }),
   work: () =>
     generatePageMetadata({
-      title: "Selected Work — Abdul Kader Albaz Aqther",
+      title: "Selected Work — Albaz Aqther",
       description: pageDescriptions.work,
       path: "/work",
       ogImage: siteConfig.og.work,
@@ -284,21 +284,21 @@ export const pageMetadata = {
     }),
   experience: () =>
     generatePageMetadata({
-      title: "Experience — Abdul Kader Albaz Aqther",
+      title: "Experience — Albaz Aqther",
       description: pageDescriptions.experience,
       path: "/experience",
       ogImage: siteConfig.og.default,
     }),
   contact: () =>
     generatePageMetadata({
-      title: "Contact Abdul Kader Albaz Aqther",
+      title: "Contact Albaz Aqther",
       description: pageDescriptions.contact,
       path: "/contact",
       ogImage: siteConfig.og.default,
     }),
   insights: () =>
     generatePageMetadata({
-      title: "Insights — Abdul Kader Albaz Aqther",
+      title: "Insights — Albaz Aqther",
       description: pageDescriptions.insights,
       path: "/insights",
       ogImage: siteConfig.og.insights,

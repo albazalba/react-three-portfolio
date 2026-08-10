@@ -24,14 +24,14 @@ export const articles: Article[] = [
       "For dashboard-heavy products, composition beats inheritance. Build small, testable units and compose them into views. Pair that with TypeScript at the boundaries and you get safer refactors as requirements change.",
       "Performance is part of architecture. Lazy loading, route-level splitting, and memoization where it matters keep interfaces responsive without premature optimization.",
     ],
-    tags: ["React", "Frontend Architecture", "TypeScript"],
+    tags: ["React", "Web Architecture", "TypeScript"],
     publishedAt: "2026-03-01T09:00:00.000Z",
     updatedAt: "2026-03-01T09:00:00.000Z",
     coverImage: "/me.png",
     seoTitle:
-      "Building Scalable React Applications — Abdul Kader Albaz Aqther",
+      "Building Scalable React Applications — Albaz Aqther",
     seoDescription:
-      "Notes on React architecture, TypeScript boundaries and maintainable frontend systems for complex products.",
+      "Notes on React architecture, TypeScript boundaries and maintainable systems for complex web products.",
     relatedProjectSlug: "kinetic-risk-console",
   },
   {
@@ -45,11 +45,11 @@ export const articles: Article[] = [
       "Metadata should be centralized. Reusable helpers for titles, descriptions, canonical URLs and structured data prevent drift across pages.",
       "Clean URL structures matter for crawlability and long-term maintainability. Human-readable paths beat query parameters every time.",
     ],
-    tags: ["Next.js", "Frontend Engineering", "SEO"],
+    tags: ["Next.js", "Web Architecture", "SEO"],
     publishedAt: "2026-04-10T09:00:00.000Z",
     updatedAt: "2026-04-10T09:00:00.000Z",
     coverImage: "/me.png",
-    seoTitle: "Next.js Architecture Decisions — Abdul Kader Albaz Aqther",
+    seoTitle: "Next.js Architecture Decisions — Albaz Aqther",
     seoDescription:
       "Engineering notes on Next.js App Router, static generation and SEO-friendly architecture.",
     relatedProjectSlug: "ai-operations-platform",
@@ -69,7 +69,7 @@ export const articles: Article[] = [
     publishedAt: "2026-05-15T09:00:00.000Z",
     updatedAt: "2026-05-15T09:00:00.000Z",
     coverImage: "/me.png",
-    seoTitle: "Building LLM Applications with Python — Abdul Kader Albaz Aqther",
+    seoTitle: "Building LLM Applications with Python — Albaz Aqther",
     seoDescription:
       "Practical notes on LLM applications, Python backends and AI agent architecture.",
     relatedProjectSlug: "ai-operations-platform",
@@ -85,13 +85,13 @@ export const articles: Article[] = [
       "Interaction patterns like drag-and-drop layouts need persistent state and predictable undo behavior. Technical architecture must support that from day one.",
       "Accessibility and performance are part of dashboard quality. Keyboard navigation, readable contrast and fast updates keep tools usable under pressure.",
     ],
-    tags: ["Frontend Engineering", "Dashboards", "UX"],
+    tags: ["Web Engineering", "Dashboards", "UX"],
     publishedAt: "2026-06-20T09:00:00.000Z",
     updatedAt: "2026-06-20T09:00:00.000Z",
     coverImage: "/me.png",
-    seoTitle: "Designing Complex Dashboards — Abdul Kader Albaz Aqther",
+    seoTitle: "Designing Complex Dashboards — Albaz Aqther",
     seoDescription:
-      "Frontend engineering notes on information architecture for analytics and operational dashboards.",
+      "Engineering notes on information architecture for analytics and operational dashboards.",
     relatedProjectSlug: "kinetic-risk-console",
   },
 ];
