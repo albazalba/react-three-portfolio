@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { siteConfig } from "@/data/site";
+import {
+  generatePersonSchema,
+  generateWebSiteSchema,
+  generateProfessionalServiceSchema,
+  absoluteUrl,
+  pageMetadata,
+} from "@/lib/seo";
+import JsonLd from "@/components/seo/JsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,63 +17,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
-  description: siteConfig.description,
-  metadataBase: new URL(siteConfig.url),
-  icons: {
-    icon: "/AQ.png",
-  },
-  openGraph: {
-    title: siteConfig.title,
-    description: siteConfig.description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/me.png",
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: ["/me.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  ...pageMetadata.home(),
   alternates: {
-    canonical: siteConfig.url,
+    canonical: absoluteUrl("/"),
+    types: {
+      "application/rss+xml": absoluteUrl("/rss.xml"),
+    },
   },
-};
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: siteConfig.name,
-  jobTitle: "Software Engineer",
-  url: siteConfig.url,
-  email: siteConfig.email,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Dubai",
-    addressCountry: "AE",
+  icons: {
+    icon: [{ url: "/AQ.png", type: "image/png" }],
+    apple: [{ url: "/AQ.png", type: "image/png" }],
   },
-  sameAs: [siteConfig.links.linkedin, siteConfig.links.github],
-  knowsAbout: [
-    "AI Applications",
-    "Software Engineering",
-    "Product Development",
-    "Python",
-    "LLMs",
-  ],
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
@@ -77,9 +39,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="bg-background text-foreground antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        <JsonLd
+          data={[
+            generateWebSiteSchema(),
+            generatePersonSchema(),
+            generateProfessionalServiceSchema(),
+          ]}
         />
         {children}
       </body>

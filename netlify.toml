@@ -4,3 +4,16 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[[redirects]]
+  from = "http://albazaqther.com/*"
+  to = "https://albazaqther.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.albazaqther.com/*"
+  to = "https://albazaqther.com/:splat"
+  status = 301
+  force = true
+

@@ -1,17 +1,46 @@
 export const siteConfig = {
-  name: "Albaz Aqther",
+  legalName: "Abdul Kader Albaz Aqther",
+  alternateNames: ["Abdul Kader Albaz", "Albaz Aqther"],
+  displayName: "Albaz Aqther",
   shortName: "Albaz / Aqther",
-  title: "Albaz Aqther — Software Engineer",
+  jobTitle: "Software Engineer",
+  title: "Abdul Kader Albaz Aqther — Software Engineer in Dubai",
   description:
-    "Software engineer building AI-powered products, intelligent systems and modern web applications. Based in Dubai.",
+    "Abdul Kader Albaz Aqther is a software engineer based in Dubai specializing in React, Next.js, TypeScript and AI-powered applications.",
+  personDescription:
+    "Software engineer specializing in frontend engineering, React, Next.js, TypeScript and AI-powered applications.",
   url: "https://albazaqther.com",
   location: "Dubai, UAE",
   email: "albazalba10@gmail.com",
+  profileImage: "/me.png",
   links: {
     github: "https://github.com/albazalba",
     linkedin: "https://www.linkedin.com/in/albazaqther/",
   },
   availability: "Available for opportunities",
+  currentEmployer: {
+    name: "Evolvex Technologies",
+    public: true,
+  },
+  knowsAbout: [
+    "Software Engineering",
+    "Frontend Engineering",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "AI Applications",
+    "LLMs",
+    "AI Agents",
+    "Python",
+    "Frontend Architecture",
+  ],
+  og: {
+    default: "/me.png",
+    home: "/me.png",
+    about: "/me.png",
+    work: "/me.png",
+    insights: "/me.png",
+  },
 };
 
 export type CaseStudySection = {
@@ -21,6 +50,7 @@ export type CaseStudySection = {
 
 export type Project = {
   id: string;
+  slug: string;
   number: string;
   title: string;
   description: string;
@@ -32,12 +62,18 @@ export type Project = {
   image?: string;
   link?: string;
   github?: string;
+  seoTitle: string;
+  seoDescription: string;
+  ogImage?: string;
+  dateCreated?: string;
+  dateModified?: string;
   caseStudy: CaseStudySection[];
 };
 
 export const featuredProjects: Project[] = [
   {
     id: "ai-ops-platform",
+    slug: "ai-operations-platform",
     number: "01",
     title: "AI Operations Platform",
     description:
@@ -55,6 +91,11 @@ export const featuredProjects: Project[] = [
     year: "2025 — Present",
     featured: true,
     mockup: "ai-ops",
+    seoTitle: "AI Operations Platform — Abdul Kader Albaz Aqther",
+    seoDescription:
+      "Case study on an AI-powered operations platform built with React, Next.js, Python, FastAPI and LLMs by Abdul Kader Albaz Aqther.",
+    dateCreated: "2025-01-01",
+    dateModified: "2026-08-01",
     caseStudy: [
       {
         title: "Overview",
@@ -90,6 +131,7 @@ export const featuredProjects: Project[] = [
   },
   {
     id: "kinetic-risk-console",
+    slug: "kinetic-risk-console",
     number: "02",
     title: "Kinetic Risk Console",
     description:
@@ -99,6 +141,11 @@ export const featuredProjects: Project[] = [
     year: "2024 — Present",
     featured: true,
     mockup: "risk",
+    seoTitle: "Kinetic Risk Console — Abdul Kader Albaz Aqther",
+    seoDescription:
+      "A modern risk-management and analytics dashboard focused on information architecture, React and TypeScript.",
+    dateCreated: "2024-06-01",
+    dateModified: "2026-08-01",
     caseStudy: [
       {
         title: "Overview",
@@ -134,6 +181,7 @@ export const featuredProjects: Project[] = [
   },
   {
     id: "pulse-feedback",
+    slug: "pulse-feedback-platform",
     number: "03",
     title: "Pulse — Feedback Platform",
     description:
@@ -151,6 +199,11 @@ export const featuredProjects: Project[] = [
     featured: true,
     mockup: "pulse",
     link: "https://pulse.antstack.org",
+    seoTitle: "Pulse Feedback Platform — Abdul Kader Albaz Aqther",
+    seoDescription:
+      "Enterprise feedback platform built with React, TypeScript, TanStack Query and AWS.",
+    dateCreated: "2022-03-01",
+    dateModified: "2024-12-01",
     caseStudy: [
       {
         title: "Overview",
@@ -186,6 +239,7 @@ export const featuredProjects: Project[] = [
   },
   {
     id: "ai-trading-system",
+    slug: "ai-trading-system",
     number: "04",
     title: "AI Trading System",
     description:
@@ -201,6 +255,11 @@ export const featuredProjects: Project[] = [
     year: "2025",
     featured: true,
     mockup: "trading",
+    seoTitle: "AI Trading System — Abdul Kader Albaz Aqther",
+    seoDescription:
+      "An experimental algorithmic trading and backtesting system combining Python, machine learning and market data.",
+    dateCreated: "2025-02-01",
+    dateModified: "2026-08-01",
     caseStudy: [
       {
         title: "Overview",
@@ -239,6 +298,7 @@ export const featuredProjects: Project[] = [
 export const additionalProjects: Project[] = [
   {
     id: "leave-tracker",
+    slug: "leave-tracker",
     number: "05",
     title: "Leave Tracker",
     description:
@@ -250,10 +310,13 @@ export const additionalProjects: Project[] = [
     mockup: "default",
     image: "/onleave.png",
     link: "https://www.onleave.today",
+    seoTitle: "Leave Tracker — Abdul Kader Albaz Aqther",
+    seoDescription: "Employee leave management system built with React and AWS.",
     caseStudy: [],
   },
   {
     id: "antstack-com",
+    slug: "antstack-com",
     number: "06",
     title: "Antstack.com",
     description:
@@ -265,10 +328,13 @@ export const additionalProjects: Project[] = [
     mockup: "default",
     image: "/antstack.png",
     link: "https://www.antstack.com/",
+    seoTitle: "Antstack.com — Abdul Kader Albaz Aqther",
+    seoDescription: "Company website built with Astro and Strapi CMS.",
     caseStudy: [],
   },
   {
     id: "cyberpwn",
+    slug: "cyberpwn",
     number: "07",
     title: "Cyberpwn",
     description:
@@ -280,10 +346,13 @@ export const additionalProjects: Project[] = [
     mockup: "default",
     image: "/cyberpwn.png",
     link: "https://antstack-website-one.vercel.app/",
+    seoTitle: "Cyberpwn — Abdul Kader Albaz Aqther",
+    seoDescription: "Modern web application with Next.js and Strapi CMS.",
     caseStudy: [],
   },
   {
     id: "real-estate",
+    slug: "real-estate-app",
     number: "08",
     title: "Real Estate App",
     description: "Full-stack real estate application built with the MERN stack.",
@@ -295,10 +364,13 @@ export const additionalProjects: Project[] = [
     image: "/Corplac.png",
     link: "https://corplac.onrender.com/",
     github: "https://github.com/albazalba/corplac",
+    seoTitle: "Real Estate App — Abdul Kader Albaz Aqther",
+    seoDescription: "Full-stack real estate application built with the MERN stack.",
     caseStudy: [],
   },
   {
     id: "restaurant-finder",
+    slug: "restaurant-finder",
     number: "09",
     title: "Restaurant Finder",
     description:
@@ -311,6 +383,8 @@ export const additionalProjects: Project[] = [
     image: "/restaurant.png",
     link: "https://retaurantfinder.netlify.app",
     github: "https://github.com/albazalba/restaurant-finder",
+    seoTitle: "Restaurant Finder — Abdul Kader Albaz Aqther",
+    seoDescription: "Next.js application for finding and exploring restaurants.",
     caseStudy: [],
   },
 ];
@@ -452,3 +526,19 @@ export const personalInterests = [
   "Product design",
   "Technology",
 ];
+
+export function getFeaturedProjects(): Project[] {
+  return featuredProjects;
+}
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return featuredProjects.find((project) => project.slug === slug);
+}
+
+export function getAllProjectSlugs(): string[] {
+  return featuredProjects.map((project) => project.slug);
+}
+
+export function getAllProjects(): Project[] {
+  return [...featuredProjects, ...additionalProjects];
+}

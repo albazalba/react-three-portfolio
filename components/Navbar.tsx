@@ -1,22 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/site";
-import { cn, scrollToSection } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Work", id: "work" },
-  { label: "About", id: "about" },
-  { label: "Experience", id: "experience" },
-  { label: "Contact", id: "contact" },
+  { label: "Work", href: "/work" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/experience" },
+  { label: "Insights", href: "/insights" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -31,10 +35,9 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
-  const handleNav = (id: string) => {
+  useEffect(() => {
     setMenuOpen(false);
-    scrollToSection(id);
-  };
+  }, [pathname]);
 
   return (
     <>
@@ -50,11 +53,7 @@ export default function Navbar() {
         )}
       >
         <div className="grid-container flex h-16 items-center justify-between md:h-20">
-          <button
-            onClick={() => handleNav("hero")}
-            className="group text-left"
-            aria-label="Scroll to top"
-          >
+          <Link href="/" className="group text-left" aria-label="Home">
             <span className="text-sm font-medium tracking-[0.15em] text-foreground transition-colors group-hover:text-accent">
               ALBAZ
             </span>
@@ -62,21 +61,27 @@ export default function Navbar() {
             <span className="text-sm font-medium tracking-[0.15em] text-muted transition-colors group-hover:text-foreground">
               AQTHER
             </span>
-          </button>
+          </Link>
 
           <nav
-            className="hidden items-center gap-10 lg:flex"
+            className="hidden items-center gap-8 lg:flex"
             aria-label="Main navigation"
           >
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleNav(link.id)}
-                className="cursor-pointer text-sm text-muted transition-colors duration-300 hover:text-foreground"
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "text-sm transition-colors duration-300 hover:text-foreground",
+                  pathname === link.href ||
+                    (link.href !== "/" && pathname.startsWith(link.href))
+                    ? "text-foreground"
+                    : "text-muted"
+                )}
                 data-cursor="interactive"
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
             <div className="flex items-center gap-2 text-xs text-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
@@ -113,16 +118,19 @@ export default function Navbar() {
               aria-label="Mobile navigation"
             >
               {navLinks.map((link, i) => (
-                <motion.button
-                  key={link.id}
+                <motion.div
+                  key={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.08 }}
-                  onClick={() => handleNav(link.id)}
-                  className="text-3xl font-light tracking-tight text-foreground"
                 >
-                  {link.label}
-                </motion.button>
+                  <Link
+                    href={link.href}
+                    className="text-3xl font-light tracking-tight text-foreground"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
               <div className="mt-4 flex items-center gap-2 text-sm text-muted">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent" />

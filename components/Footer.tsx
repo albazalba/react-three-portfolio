@@ -1,8 +1,17 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { scrollToSection } from "@/lib/utils";
+
+const footerLinks = [
+  { label: "Work", href: "/work" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/experience" },
+  { label: "Insights", href: "/insights" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Footer() {
   return (
@@ -16,8 +25,19 @@ export default function Footer() {
             <p className="mt-2 text-sm text-muted">
               Software Engineer · Dubai
             </p>
+            <nav aria-label="Footer navigation" className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs text-muted transition-colors hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
             <p className="mt-6 text-xs text-muted">
-              © 2026 {siteConfig.name}
+              © 2026 {siteConfig.legalName}
             </p>
           </div>
 

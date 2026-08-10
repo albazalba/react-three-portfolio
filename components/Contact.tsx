@@ -4,17 +4,31 @@ import { ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import RevealOnScroll from "./ui/RevealOnScroll";
 
-export default function Contact() {
+type ContactProps = {
+  standalone?: boolean;
+};
+
+export default function Contact({ standalone = false }: ContactProps) {
+  const TitleTag = standalone ? "h1" : "h2";
+
   return (
-    <section id="contact" className="section-padding border-t border-border">
+    <section
+      id="contact"
+      className={
+        standalone ? "section-padding pb-24" : "section-padding border-t border-border"
+      }
+    >
       <div className="grid-container">
         <RevealOnScroll>
-          <h2 className="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.1] tracking-tight">
+          <TitleTag className="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.1] tracking-tight">
             Let&apos;s build something
             <br />
             worth using.
-          </h2>
-          <p className="mt-8 text-muted">{siteConfig.location}</p>
+          </TitleTag>
+          <p className="mt-8 text-muted">
+            Software engineer based in {siteConfig.location}. Available for
+            opportunities in Dubai, the UAE and remote/global teams.
+          </p>
         </RevealOnScroll>
 
         <RevealOnScroll className="mt-16" delay={0.1}>

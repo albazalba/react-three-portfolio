@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && tsx scripts/generate-rss.ts",
     "start": "next start",
     "lint": "next lint"
   },
@@ -23,6 +23,7 @@
     "eslint": "^9.21.0",
     "eslint-config-next": "^15.2.4",
     "tailwindcss": "^4.0.15",
+    "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   }
 }
