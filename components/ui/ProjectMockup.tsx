@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type MockupType = "ai-ops" | "risk" | "pulse" | "trading" | "default";
+type MockupType = "mind" | "ai-ops" | "risk" | "pulse" | "trading" | "default";
 
 type ProjectMockupProps = {
   type: MockupType;
@@ -16,11 +16,65 @@ export default function ProjectMockup({ type, className }: ProjectMockupProps) {
       )}
       aria-hidden="true"
     >
+      {type === "mind" && <MindMockup />}
       {type === "ai-ops" && <AiOpsMockup />}
       {type === "risk" && <RiskMockup />}
       {type === "pulse" && <PulseMockup />}
       {type === "trading" && <TradingMockup />}
       {type === "default" && <DefaultMockup />}
+    </div>
+  );
+}
+
+function MindMockup() {
+  return (
+    <div className="flex h-full flex-col bg-[#0a0a0a] p-4">
+      <div className="mb-4 flex items-center justify-between border-b border-white/5 pb-3">
+        <div className="flex items-center gap-2">
+          <div className="h-2 w-2 rounded-full bg-accent/60" />
+          <span className="text-[10px] uppercase tracking-widest text-muted">
+            MIND
+          </span>
+        </div>
+        <span className="text-[9px] text-accent/80">DOI / PMID verified</span>
+      </div>
+      <div className="grid flex-1 grid-cols-12 gap-3">
+        <div className="col-span-4 space-y-1.5">
+          {["Intent", "Retrieval", "Reasoning", "Safety"].map((stage, i) => (
+            <div
+              key={stage}
+              className={cn(
+                "rounded-sm border px-2 py-1.5 text-[9px]",
+                i === 3
+                  ? "border-accent/30 bg-accent/10 text-accent"
+                  : "border-white/5 bg-white/[0.02] text-muted"
+              )}
+            >
+              {stage}
+            </div>
+          ))}
+        </div>
+        <div className="col-span-8 flex flex-col gap-2">
+          <div className="rounded-sm border border-white/5 bg-white/[0.02] p-3">
+            <div className="mb-2 text-[9px] text-muted">Why does my mind do this?</div>
+            <div className="space-y-1.5">
+              <div className="h-1 w-full rounded bg-white/10" />
+              <div className="h-1 w-4/5 rounded bg-white/10" />
+              <div className="h-1 w-2/3 rounded bg-white/5" />
+            </div>
+          </div>
+          <div className="flex gap-2">
+            {["10.1038/…", "PMID 3812"].map((cite) => (
+              <div
+                key={cite}
+                className="rounded-sm border border-accent/20 px-2 py-1 text-[8px] text-accent/80"
+              >
+                {cite}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

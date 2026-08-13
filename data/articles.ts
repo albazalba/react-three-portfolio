@@ -72,7 +72,7 @@ export const articles: Article[] = [
     seoTitle: "Building LLM Applications with Python — Albaz Aqther",
     seoDescription:
       "Practical notes on LLM applications, Python backends and AI agent architecture.",
-    relatedProjectSlug: "ai-operations-platform",
+    relatedProjectSlug: "mind",
   },
   {
     slug: "designing-complex-dashboards",

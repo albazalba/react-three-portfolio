@@ -175,7 +175,7 @@ export function generateProjectSchema(project: Project) {
     },
     keywords: project.technologies.join(", "),
     programmingLanguage: project.technologies.filter((t) =>
-      ["React", "Next.js", "TypeScript", "Python", "JavaScript"].includes(t)
+      ["React", "Next.js", "TypeScript", "Python", "JavaScript", "FastAPI"].includes(t)
     ),
     dateCreated: project.dateCreated,
     dateModified: project.dateModified,

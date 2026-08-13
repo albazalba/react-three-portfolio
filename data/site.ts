@@ -61,7 +61,7 @@ export type Project = {
   technologies: string[];
   year: string;
   featured: boolean;
-  mockup: "ai-ops" | "risk" | "pulse" | "trading" | "default";
+  mockup: "mind" | "ai-ops" | "risk" | "pulse" | "trading" | "default";
   image?: string;
   link?: string;
   github?: string;
@@ -75,9 +75,73 @@ export type Project = {
 
 export const featuredProjects: Project[] = [
   {
+    id: "mind",
+    slug: "mind",
+    number: "01",
+    title: "MIND",
+    description:
+      "A full-stack neuroscience and psychology exploration app built to answer “why does my mind do this?” rather than give generic advice. Conversations run through a modular AI pipeline with RAG, a non-overridable safety gate, and citations backed only by real DOI/PMID papers.",
+    role: "Full-stack developer",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "pgvector",
+      "LLMs",
+    ],
+    year: "2026",
+    featured: true,
+    mockup: "mind",
+    link: "https://mind-phi-hazel.vercel.app",
+    seoTitle: "MIND — Albaz Aqther",
+    seoDescription:
+      "Case study on MIND, an evidence-based neuroscience and psychology platform with a multi-agent AI pipeline, RAG, and verified citations by Albaz Aqther.",
+    dateCreated: "2026-01-01",
+    dateModified: "2026-08-13",
+    caseStudy: [
+      {
+        title: "Overview",
+        content:
+          "MIND is a greenfield full-stack product designed as an evidence-based alternative to generic AI mental-health chatbots. The core product question is “Why does my mind behave this way?” — not “What should I do?” It is an educational platform for exploring neuroscience and psychology through structured, cited conversations.",
+      },
+      {
+        title: "Problem",
+        content:
+          "Typical chatbots invent citations, collapse every query into generic advice, and treat scientific knowledge and personal memory as the same context. MIND needed a system that could retrieve real papers, keep personal data separate, and refuse unsafe or overconfident responses before they reach the user.",
+      },
+      {
+        title: "Approach",
+        content:
+          "Built a multi-agent conversation pipeline instead of a single LLM prompt. Each turn flows through intent analysis, context, psychological patterns, knowledge retrieval, evidence synthesis, neuroscience and psychology reasoning, intervention design, a non-overridable safety gate, then the response. Scientific knowledge and personal memory are stored separately.",
+      },
+      {
+        title: "Architecture",
+        content:
+          "The backend is a FastAPI service with modular agents. Retrieval uses PostgreSQL with pgvector; research integrates PubMed and Semantic Scholar. Citations are never invented — only papers with verified DOI or PMID identifiers are shown. Next.js 15 delivers a public site plus an authenticated workspace with streaming SSE replies. Auth is production-grade: Argon2id passwords, opaque hashed sessions, TOTP MFA, OAuth scaffolding, rate limits, audit logs, and IDOR-safe ownership checks. Conversation bodies are not logged. Deployed as a split architecture: Vercel for the app, Render for the Dockerized API, and Neon for Postgres, with a Next.js /api proxy handling SSE and first-party session cookies.",
+      },
+      {
+        title: "Product surface",
+        content:
+          "The app includes a research explorer, thought and experiment tools, insights, and a full account system with MFA, session management, and privacy controls for exporting or deleting data.",
+      },
+      {
+        title: "Result",
+        content:
+          "A live educational platform with streaming conversations, verified citations, and a privacy-first backend. The pipeline stays inspectable: retrieval, reasoning, and safety are separate stages rather than one opaque prompt.",
+      },
+      {
+        title: "Technology",
+        content:
+          "Next.js 15 · React 19 · TypeScript · Tailwind · FastAPI · Python · PostgreSQL · pgvector · Redis · Groq (Llama 3.3) · SSE · Docker · Vercel · Render · Neon",
+      },
+    ],
+  },
+  {
     id: "ai-ops-platform",
     slug: "ai-operations-platform",
-    number: "01",
+    number: "02",
     title: "AI Operations Platform",
     description:
       "An AI-powered operations platform designed to help businesses understand their sites, metrics and operational data through intelligent agents.",
@@ -135,7 +199,7 @@ export const featuredProjects: Project[] = [
   {
     id: "kinetic-risk-console",
     slug: "kinetic-risk-console",
-    number: "02",
+    number: "03",
     title: "Kinetic Risk Console",
     description:
       "A modern risk-management and analytics interface focused on presenting complex financial and operational information through highly usable dashboards.",
@@ -185,7 +249,7 @@ export const featuredProjects: Project[] = [
   {
     id: "pulse-feedback",
     slug: "pulse-feedback-platform",
-    number: "03",
+    number: "04",
     title: "Pulse — Feedback Platform",
     description:
       "A comprehensive feedback application with advanced UI components, data tables, and state management for enterprise teams.",
@@ -242,7 +306,7 @@ export const featuredProjects: Project[] = [
   {
     id: "ai-trading-system",
     slug: "ai-trading-system",
-    number: "04",
+    number: "05",
     title: "AI Trading System",
     description:
       "An experimental algorithmic trading system combining market data, machine learning, backtesting, and MT5 integration.",
@@ -301,7 +365,7 @@ export const additionalProjects: Project[] = [
   {
     id: "leave-tracker",
     slug: "leave-tracker",
-    number: "05",
+    number: "06",
     title: "Leave Tracker",
     description:
       "Employee leave management system with a modern, responsive interface.",
@@ -318,7 +382,7 @@ export const additionalProjects: Project[] = [
   {
     id: "antstack-com",
     slug: "antstack-com",
-    number: "06",
+    number: "07",
     title: "Antstack.com",
     description:
       "Company website built with Astro, Strapi CMS and Mailchimp integration.",
@@ -335,7 +399,7 @@ export const additionalProjects: Project[] = [
   {
     id: "cyberpwn",
     slug: "cyberpwn",
-    number: "07",
+    number: "08",
     title: "Cyberpwn",
     description:
       "Modern web application with Next.js, Tailwind, Strapi CMS and Mailchimp.",
@@ -352,7 +416,7 @@ export const additionalProjects: Project[] = [
   {
     id: "real-estate",
     slug: "real-estate-app",
-    number: "08",
+    number: "09",
     title: "Real Estate App",
     description: "Full-stack real estate application built with the MERN stack.",
     role: "Developer",
@@ -368,7 +432,7 @@ export const additionalProjects: Project[] = [
   {
     id: "restaurant-finder",
     slug: "restaurant-finder",
-    number: "09",
+    number: "10",
     title: "Restaurant Finder",
     description:
       "Next.js application for finding and exploring restaurants.",
